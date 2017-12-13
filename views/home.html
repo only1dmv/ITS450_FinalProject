@@ -1,0 +1,64 @@
+<!-- box begin -->
+<div class="box alt">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<div class="wrapper"><?php // Check for sales!
+
+// If records are returned, include the view:
+if (mysqli_num_rows($r) > 0) {
+	
+	echo '<dl class="special fright">
+		<dt><a href="/shop/sales/">Sale Items</a></dt>';
+
+	// Fetch each item:
+	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+		echo '<dd><a href="/shop/sales/#' . $row['sku'] . '" title="View This Product"><img alt="" src="/products/' . $row['image'] . '" /><span>' . $row['sale_price'] . '</span></a></dd>';
+	}
+	
+	echo '</dl>';
+
+} // End of mysqli_num_rows() IF.
+?>
+               <h2>Welcome to Our Online Book Store!</h2>
+               <p>Thank you for visiting our website.  Feel free to browse our products, and if you find anything that interests you go ahead and purchase it!</p>
+               <p>Please use the links at the top to browse through our catalog. If you've been here before, you can find things you bookmarked by clicking on your Wish List and Cart links. </p>
+         	</div>
+         </div>
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
+<!-- box begin -->
+<div class="box">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<h3>About JDB Books, Inc.</h3>
+         	<p>JDB Books, Inc. was started in 2017, founded by Jeremy, Donn, and Brendunn.  We sell a variety of books, and book accessories, and our catalog is growing everyday.</p>
+         	<p>Everything on the site is encrypted so all of your information is safe.</p>
+      </div>	
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
